@@ -1,18 +1,43 @@
-// Import Link component for navigation without page refresh
+import React from 'react';
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 // Navbar component that will be used across all pages
 function Navbar() {
   return (
-    <nav>
-      {/* Using Link instead of <a> tags prevents page reload */}
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/events">Events</Link></li>
-        <li><Link to="/board">Board</Link></li>
-        <li><Link to="/contact">Contact Us</Link></li>
-      </ul>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <img src="/maiss_logo.png" alt="MAISS Logo" />
+        </Link>
+        <ul className="nav-menu">
+          <li className="nav-item">
+            <Link to="/" className="nav-links">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-links">
+              About
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/events" className="nav-links">
+              Events
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/board" className="nav-links">
+              Board
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/contact" className="nav-links">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

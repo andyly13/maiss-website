@@ -1,54 +1,93 @@
-// Contact page component with a simple form
+import React from 'react';
+import '../App.css';
+
+const socialLinks = [
+  {
+    platform: 'Instagram',
+    link: 'https://www.instagram.com/maissuci/',
+    icon: 'fab fa-instagram',
+    handle: '@maissuci'
+  },
+  {
+    platform: 'Email',
+    link: 'mailto:maiss.uci@gmail.com',
+    icon: 'fas fa-envelope',
+    handle: 'maiss.uci@gmail.com'
+  },
+  {
+    platform: 'LinkedIn',
+    link: 'https://www.linkedin.com/company/maissuci/',
+    icon: 'fab fa-linkedin',
+    handle: 'UCI MAISS'
+  },
+  {
+    platform: 'Discord',
+    link: 'https://discord.com/invite/wbtsGUMdqY',
+    icon: 'fab fa-discord',
+    handle: 'MAISS Discord'
+  }
+];
+
+const faqs = [
+  {
+    question: 'How can I join MAISS?',
+    answer: 'You can join MAISS by attending our general meetings and events. Sign up to be a paid member for exclusive resources!'
+  },
+  {
+    question: 'Do I need to be a Business Information Management major to join?',
+    answer: 'No! MAISS welcomes students from all majors who are interested in the intersection of business and technology.'
+  },
+  {
+    question: 'When are your general meetings?',
+    answer: 'We host weekly general meetings on Wednesdays from 6:00 PM - 7:00 PM during the academic quarter. Follow our social media for specific dates and times!'
+  },
+  {
+    question: 'How can I become a board member?',
+    answer: 'Board applications open during Spring quarter. Active membership and participation in MAISS events are highly encouraged.'
+  }
+  // Add more FAQs as needed
+];
+
 function Contact() {
-  // Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add form submission logic here
-    console.log('Form submitted');
-  };
-
   return (
-    <div className="contact">
-      <h1>Contact Us</h1>
-      <div className="contact-info">
-        <p>Get in touch with us using the form below or reach out directly:</p>
-        <p>Email: info@organization.com</p>
-        <p>Phone: (555) 123-4567</p>
-      </div>
+    <div className="contact-container">
+      {/* Hero Section */}
+      <section className="contact-hero">
+        <h1>CONTACT US</h1>
+        <p>Do you have a question, comment, or feedback for us? Want to collaborate with MAISS? Send us an email!</p>
+      </section>
 
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            required 
-          />
+      {/* Social Links Section */}
+      <section className="contact-social">
+        <div className="social-links-grid">
+          {socialLinks.map((platform, index) => (
+            <a 
+              key={index} 
+              href={platform.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link-card"
+            >
+              <i className={platform.icon}></i>
+              <h3>{platform.platform}</h3>
+              <p>{platform.handle}</p>
+            </a>
+          ))}
         </div>
+      </section>
 
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            required 
-          />
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div className="faq-grid">
+          {faqs.map((faq, index) => (
+            <div key={index} className="faq-card">
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
         </div>
-
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea 
-            id="message" 
-            name="message" 
-            rows="5" 
-            required 
-          ></textarea>
-        </div>
-
-        <button type="submit">Send Message</button>
-      </form>
+      </section>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 
 // Import necessary components from react-router-dom for navigation
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -19,19 +20,17 @@ function App() {
   return (
     // Router component wraps our entire app to enable routing
     <Router>
-      {/* Navbar will appear on all pages */}
-      <Navbar />
-      
-      {/* Routes component contains all our route definitions */}
-      <Routes>
-        {/* Each Route maps a URL path to a component */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/board" element={<Board />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-
+      <div className="App">
+        <Navbar />
+        <Routes>
+          {/* Each Route maps a URL path to a component */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/board" element={<Board />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
       {/* Footer will appear on all pages */}
       <Footer />
     </Router>
