@@ -1,4 +1,5 @@
 import './App.css';
+import 'normalize.css'
 import React from 'react';
 
 // Import necessary components from react-router-dom for navigation
