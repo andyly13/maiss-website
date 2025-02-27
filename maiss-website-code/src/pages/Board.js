@@ -40,7 +40,7 @@ const boardMembers = [
   {
     name: 'Felix Werner',
     title: 'Co-VP of Internal Affairs',
-    image: '/board-headshots/marketing.jpg'
+    image: '/board-headshots/felix.JPG'
   },
   {
     name: 'Chloe Chan',
@@ -55,12 +55,12 @@ const boardMembers = [
   {
     name: 'Aidan Jayakumar',
     title: 'VP of Finance',
-    image: '/board-headshots/marketing.jpg'
+    image: '/board-headshots/aidan.JPG'
   },
   {
     name: 'Michael Bakhtiar',
     title: 'VP of Community Developement',
-    image: '/board-headshots/marketing.jpg'
+    image: '/board-headshots/michael.JPG'
   },
   
   // Add all 13 board members here

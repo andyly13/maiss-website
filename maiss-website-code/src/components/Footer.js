@@ -1,80 +1,57 @@
-import { useState } from 'react';
+import React from 'react';
+import '../App.css';
 
 function Footer() {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically handle the newsletter signup
-    console.log('Newsletter signup:', email);
-    setEmail(''); // Clear the input after submission
-  };
-
   return (
-    <footer className="footer">
+    <footer>
       <div className="footer-content">
-        {/* Social Media Links */}
-        <div className="social-links">
-          <h3>Follow Us</h3>
+        <div className="footer-section">
+          <h3>Connect With Us</h3>
           <div className="social-icons">
-            <a 
-              href="https://www.instagram.com/maissuci/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <i className="fab fa-instagram"></i> Instagram
+            <a href="https://www.instagram.com/maissuci/" className="social-icon" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
+              <span>@maissuci</span>
             </a>
-            <a 
-              href="https://www.linkedin.com/in/maissuci/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <i className="fab fa-linkedin"></i> LinkedIn
+            <a href="https://www.linkedin.com/company/maissuci/" className="social-icon" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i>
+              <span>UCI MAISS</span>
             </a>
-            <a 
-              href="https://discord.com/invite/wbtsGUMdqY" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <i className="fab fa-discord"></i> Discord
+            <a href="mailto:maiss.uci@gmail.com" className="social-icon">
+              <i className="fas fa-envelope"></i>
+              <span>maiss.uci@gmail.com</span>
             </a>
-            <a 
-              href="https://tiktok.com/@maiss_uoft" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-icon"
-            >
-              <i className="fab fa-tiktok"></i> TikTok
+            <a href="https://discord.com/invite/wbtsGUMdqY" className="social-icon" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-discord"></i>
+              <span>Join our Discord</span>
             </a>
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="newsletter-signup">
-          <h3>Join Our Newsletter</h3>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              required
-            />
-            <button type="submit">Subscribe</button>
-          </form>
+        <div className="footer-section">
+          <h3>Quick Links</h3>
+          <div className="quick-links">
+            <a href="/about">About Us</a>
+            <a href="/events">Events</a>
+            <a href="/board">Board</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </div>
+
+        <div className="footer-section">
+          <h3>Location</h3>
+          <p>University of California, Irvine</p>
+          <p>Paul Merage School of Businesså</p>
+          <p>Irvine, CA 92697</p>
         </div>
       </div>
-
+      
       <div className="footer-bottom">
       <p>
           &copy; {new Date().getFullYear()} MAISS UCI <br/>
-          Developed by <a href="https://www.linkedin.com/in/andrewly13/" target="_blank" rel="noopener noreferrer">Andrew Ly</a> | 
-          Designed by <a href="https://www.linkedin.com/in/malakshahin/" target="_blank" rel="noopener noreferrer">Malak Shahin </a> 
-          and <a href="https://www.linkedin.com/in/laurennguyen25/" target="_blank" rel="noopener noreferrer">Lauren Nguyen</a>
-        </p>
+          Developed by <a href="https://www.linkedin.com/in/andrewly13/" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Andrew Ly</a> | 
+          Designed by <a href="https://www.linkedin.com/in/malakshahin/" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Malak Shahin</a> {' '}
+          and <a href="https://www.linkedin.com/in/laurennguyen25/" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Lauren Nguyen</a>
+      </p>
       </div>
     </footer>
   );

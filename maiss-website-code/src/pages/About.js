@@ -44,7 +44,7 @@ function About() {
               enjoy maximize your college experience!</p>
           </div>
           <div className="content-image">
-            <img src="/about_1.jpg" alt="MAISS Impact" />
+            <img src="/social-about.jpg" alt="MAISS Impact" />
           </div>
         </div>
       </section>
