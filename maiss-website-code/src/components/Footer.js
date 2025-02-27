@@ -40,7 +40,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Location</h3>
           <p>University of California, Irvine</p>
-          <p>Paul Merage School of Businesså</p>
+          <p>Paul Merage School of Business</p>
           <p>Irvine, CA 92697</p>
         </div>
       </div>
