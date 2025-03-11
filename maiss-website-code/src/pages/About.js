@@ -7,7 +7,7 @@ function About() {
     <div className="about-container">
       {/* First Section - Hero */}
       <section className="about-hero-section">
-        <h1 className="about-title">ABOUT US</h1>
+        <h1 className="about-title">TESTING TESTING</h1>
         <img src="/about_us_feature.jpg" alt="MAISS Team" className="about-hero-image" />
       </section>
 
